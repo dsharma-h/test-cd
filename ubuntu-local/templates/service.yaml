@@ -1,0 +1,14 @@
+# templates/service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-ubuntu-service
+spec:
+  selector:
+    app: my-ubuntu
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort  # Adjust the service type as needed
